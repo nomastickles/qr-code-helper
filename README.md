@@ -3,7 +3,7 @@
 ## Setup
 
 ```sh
-docker build -t qr-code-helper .
+docker build -t qr-code-helper . && docker run -d -p 8088:80 qr-code-helper
 
 ```
 

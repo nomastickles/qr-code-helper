@@ -18,11 +18,12 @@ select, button {
   border-radius: 15px;
   background: #383838;
   color: #f1e6f0;
-  /* text-transform: lowercase; */
-  padding: 6px
+  padding: 6px;
+  border: 1px solid #979494;
 }
 button {
   box-shadow: none;
+
 }
 select, input {
   width: 100%;
@@ -31,7 +32,7 @@ select, input {
 
 hr {
   margin-top: 32px;
-  border-color: #f590eb;
+  border-color: #979494;
   margin-bottom: 25px;
 }
 
