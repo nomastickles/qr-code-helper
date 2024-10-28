@@ -1,0 +1,50 @@
+{
+  "name": "qr-code-helper",
+  "homepage": "https://github.com/nomastickles/qr-code-helper",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.3.0",
+    "@testing-library/jest-dom": "^6.6.2",
+    "@testing-library/react": "^16.0.1",
+    "@testing-library/user-event": "^14.5.2",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.8.1",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "gh-pages": "^6.2.0",
+    "qr-scanner": "^1.4.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-scripts": "5.0.1",
+    "typescript": "^5.6.3"
+  },
+  "scripts": {
+    "start": "PUBLIC_URL=/ react-scripts start",
+    "build": "react-scripts build",
+    "build:local": "PUBLIC_URL=/ react-scripts build",
+    "test": "react-scripts test",
+    "start:demo": "REACT_APP_IS_DEMO=1 && yarn start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build -u 'github-actions-bot <support+actions@github.com>'",
+    "start:server": "python flask.py"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

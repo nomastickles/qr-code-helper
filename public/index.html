@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>QR Scanner Helper</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <link href="%PUBLIC_URL%/animate.min.css" rel="stylesheet" />
+
+</head>
+
+<script>
+  // window.APP_DATA_INIT = {{ app_data | tojson | safe }}
+</script>
+
+<body>
+
+  <!--  -->
+
+  <div id="reactRoot"></div>
+
+  <!--  -->
+
+  <div class="hero">
+
+    <!-- <div class="hero__title"></div> -->
+    <div class="cube"></div>
+    <div class="cube"></div>
+    <div class="cube"></div>
+    <div class="cube"></div>
+    <div class="cube"></div>
+    <div class="cube"></div>
+
+    <!--  -->
+    <div>
+
+      <button id="start-button">Start Camera</button>
+      <button id="stop-button">Stop Camera</button>
+
+      <br />
+      <br />
+      <!-- <b>Has camera: </b> -->
+      <span id="cam-has-camera"></span>
+      <!-- <br> -->
+      <div>
+        <select id="cam-list">
+          <option value="environment" selected>Environment Facing (default)</option>
+          <option value="user">User Facing</option>
+        </select>
+      </div>
+      <!-- <b>Camera has flash: </b> -->
+      <span id="cam-has-flash"></span>
+      <div>
+        <button id="flash-toggle">📸 Flash: <span id="flash-state">off</span></button>
+      </div>
+
+      <select id="scan-region-highlight-style-select">
+        <option value="default-style">Default style</option>
+        <option value="example-style-1">Example custom style 1</option>
+        <option value="example-style-2">Example custom style 2</option>
+      </select>
+
+    </div>
+    <div>
+      <select id="inversion-mode-select">
+        <option value="original">Scan original (dark codes on bright bg)</option>
+        <option value="invert">Scan inverted (bright codes on dark bg)</option>
+        <option value="both">Scan both</option>
+      </select>
+      <br>
+    </div>
+
+
+
+    <br />
+    <span id="cam-qr-result"></span>
+    <hr />
+    <input type="file" id="file-selector">
+    <span id="file-qr-result"></span>
+    <span id="cam-qr-result-timestamp"></span>
+    <hr />
+
+
+
+    <div id="video-container">
+      <video id="qr-video" class="animate__animated animate__fadeIn animate__slow"></video>
+    </div>
+
+    <!-- Disable scan region -->
+    <input id="show-scan-region" type="checkbox" default="true" class="animate__animated animate__fadeIn animate__slow">
+
+  </div>
+</body>
+
+
+</html>
